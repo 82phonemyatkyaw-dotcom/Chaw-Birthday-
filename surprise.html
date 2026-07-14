@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins,sans-serif;
+height:100vh;
+overflow:hidden;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#ffd6e8,#fff5b8);
+text-align:center;
+}
+
+.card{
+background:white;
+padding:30px;
+width:90%;
+max-width:420px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+z-index:2;
+}
+
+h1{
+font-family:"Great Vibes",cursive;
+font-size:56px;
+color:#ff4d94;
+margin-bottom:15px;
+}
+
+p{
+font-size:20px;
+color:#555;
+line-height:1.7;
+}
+
+.heart{
+position:fixed;
+bottom:-50px;
+font-size:28px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+from{
+transform:translateY(0);
+opacity:1;
+}
+to{
+transform:translateY(-110vh);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy Birthday ❤️</h1>
+
+<p>
+ကို့အချစ်ရဆုံးချစ်သူလေး,<br><br>
+
+ပျော်ရွှင်စရာမွေးနေ့လေးဖြစ်ပါစေ 
+ကိုကအဝေးမှာဆိုတော့ တတ်နိုင်သလောက်လေး
+လုပ်ပေးလိုက်ရပါတယ်
+အများကြီးချစ်တယ် အမြဲတမ်းလည်းချစ်မယ်
+
+I love you so much. ❤️🎂
+</p>
+
+<br>
+
+<audio autoplay controls id="music">
+ <source src="Music for birthday (1).mp3" type="audio/mpeg">
+</audio>
+
+</div>
+
+<script>
+function createHeart(){
+
+const heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(4+Math.random()*3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(createHeart,300);
+// Go to final page after 98 seconds
+setTimeout(function () {
+    window.location.href = "final.html";
+}, 5000);
+</script>
+
+</body>
+</html>

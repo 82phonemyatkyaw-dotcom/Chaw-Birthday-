@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Memories ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.gallery{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-height:100vh;
+}
+
+.gallery h1{
+    color:#ff4d94;
+    margin-bottom:20px;
+}
+
+.gallery img{
+    width:320px;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+    border:8px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.caption{
+    margin:18px;
+    font-size:20px;
+    color:#555;
+    text-align:center;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+}
+
+.buttons button{
+    padding:12px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d94;
+    color:white;
+    font-size:18px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="gallery">
+
+<h1>📸 My Beautiful Girl ❤️</h1>
+
+<img id="photo" src="photo1.jpg">
+
+<p class="caption" id="caption">
+The day that changed my life ❤️
+</p>
+
+<div class="buttons">
+<button onclick="previousPhoto()">⬅ Previous</button>
+<button onclick="nextPhoto()">Next ➡</button>
+</div>
+
+</div>
+
+<script>
+
+const photos = [
+"photo1.jpg",
+"photo2.jpg",
+"photo3.jpg",
+"photo4.jpg",
+"photo5.jpg",
+"photo6.jpg",
+"photo7.jpg",
+"photo8.jpg",
+"photo9.jpg",
+"photo10.jpg"
+];
+
+const captions = [
+ "မွေးနေ့ရှင်လေးပါ ❤️",
+"အလှဆုံးအပြုံးလေးနဲ့",
+"အသဲယားစရာလေးပါ 🥰",
+"ပါးစပ်ထဲတွေ့ကရာတွေမထည့်ရဘူးနော်😜",
+"ဘာရုပ်လေးလဲ✨",
+"ချောစိတ်တို😍",
+"အကြည့်လေးကအသက်😘 ❤️",
+"You are my sunshine ☀️",
+"ကြွက်ကြီး🤡",
+"သနပ်ခါးလေးနဲ့ချစ်စရာလေး 🎂❤️"
+];
+
+let current=0;
+
+function showPhoto(){
+document.getElementById("photo").src=photos[current];
+document.getElementById("caption").innerText=captions[current];
+}
+
+function nextPhoto(){
+
+if(current<photos.length-1){
+current++;
+showPhoto();
+}else{
+window.location.href="cake.html";
+}
+
+}
+
+function previousPhoto(){
+
+if(current>0){
+current--;
+showPhoto();
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#ffd6e8,#fff8c9);
+    overflow:hidden;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.title{
+    font-family:'Great Vibes',cursive;
+    font-size:58px;
+    color:#ff4d94;
+    margin-bottom:20px;
+    animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 10px #ff9fc5;
+    }
+    to{
+        text-shadow:0 0 30px #ff4d94;
+    }
+}
+
+.message-box{
+    width:90%;
+    max-width:600px;
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+#message{
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+    min-height:220px;
+    white-space:pre-wrap;
+}
+
+.love{
+    margin-top:25px;
+    font-size:28px;
+    color:#ff4d94;
+    animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+    50%{
+        transform:scale(1.12);
+    }
+}
+
+#surpriseBtn{
+    margin-top:25px;
+    padding:14px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d94;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    width:90%;
+    max-width:450px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+}
+
+.popup-content h2{
+    color:#ff4d94;
+    margin-bottom:15px;
+}
+
+.popup-content button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#ff4d94;
+    color:white;
+    cursor:pointer;
+}
+
+/* Floating hearts */
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    font-size:28px;
+    animation:floatHeart 6s linear forwards;
+}
+
+@keyframes floatHeart{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh);
+        opacity:0;
+    }
+}
